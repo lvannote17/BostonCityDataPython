@@ -8,3 +8,7 @@ url = "https://pollysnips.s3.amazonaws.com/bostonEmployeeSalaries.json"
 uh = urllib.request.urlopen(url)
 data = uh.read().decode()
 print('Retrieved', len(data), 'characters')
+
+# create dictionary
+info = json.loads(data)
+newData = info["data"]
